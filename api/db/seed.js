@@ -7,7 +7,11 @@ const prisma = new PrismaClient()
 async function main() {
   await prisma.$connect()
 
-  const post = await prisma.recipes.findMany()
+  const post = await prisma.recipes.findUnique({
+    where: {
+      id: '611505cc8e5468252c400150',
+    },
+  })
   console.log(post)
 }
 

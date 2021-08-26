@@ -13,7 +13,7 @@ generator client {
 model recipes {
   id          String   @id @default(dbgenerated()) @map("_id") @db.ObjectId
   name        String
-  indredients String[]
+  ingredients String[]
 }
 
 model Post {
